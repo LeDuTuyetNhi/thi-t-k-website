@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Xiaomi Redmi Note 5 32GB</title>
+  <link href="css/dth1.css" rel="stylesheet" type="text/css" />
+  <script src="js/dth1.js"></script>
+  <link rel="stylesheet" href="vendor/jquery/jquery.min.js">
+  <link rel="stylesheet" href="vendor/jquery/popper.min.js">
+  <link rel="stylesheet" href="vendor/bootstrap/js/bootstrap.min.js">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="css/lienhe.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="trangchu.html"><img src="img/images.jpg" alt="1" height="60px" width="75%"></a>
+      <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="giohang.html">Giỏ hàng</a>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+          <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+              <div class="container">
+                <h1>Sign Up</h1>
+                <hr>
+                <label for="fullname"><b>Fullname</b></label>
+                <input type="text" name="txt_us" id="fullname" placeholder="Fullname"><br>  
+                <p id="kq1" style="color: red"></p>
+                <label for="Username"><b>Username</b></label>
+                <input type="text" name="txt_us" id="user" placeholder="username"><br>            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+          <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>      
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="menu">
+    <nav>
+      <ul class="bang">
+        <li><a href="trangchu.html"> TRANG CHỦ</a></li>
+        <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+        <li><a href="dienthoai.html">ĐIỆN THOẠI</a>
+          <ul>
+            <li><h4>hãng sản xuất</h4></li> 
+            <li><a href="iphone.html">Apple(iphone)</a></li>
+            <li><a href="sony.html">Sony </a></li>
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="nokia.html">Nokia</a></li>
+            <li><a href="oppo.html">Oppo</a></li>
+          </ul>
+        </li>
+        <li><a href="huongdan.html">HƯỚNG DẪN MUA HÀNG</a></li>
+        <li><a href="lienhe.html">LIÊN HỆ</a></li>
+        <li><a href="trangcanhan.html">TRANG CÁ NHÂN</a></li>
+      </ul> 
+    </nav>    
+  </div>
+  <div class="nd">
+<h2 class="text-center"></h2>
+<div class="container"> 
+ <table id="cart" class="table table-hover table-condensed"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Tên sản phẩm</th> 
+    <th style="width:10%">Giá</th> 
+    <th style="width:8%">Số lượng</th> 
+    <th style="width:22%" class="text-center">Thành tiền</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody><tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class=" hidden-xs"><img src="img/dth_1.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Xiaomi Redmi Note 5 32GB</h4> 
+      <p></p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">4.799.000VNĐ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">4.799.000VNĐ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class=" hidden-xs"><img src="img/dth_2.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Oppo F7 </h4> 
+      <p></p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">7.999.000VNĐ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">7.999.000VNĐ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody><tfoot> 
+   <tr class="visible-xs"> 
+    <td class="text-center"><strong>Tổng 12.600.000 đ</strong>
+    </td> 
+   </tr> 
+   <tr> 
+    <td><a href="" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+    </td> 
+    <td colspan="2" class="hidden-xs"> </td> 
+    <td class="hidden-xs text-center"><strong>Tổng tiền 12.600.000 đ</strong>
+    </td> 
+    <td><a href="http://hocwebgiare.com/" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>    
+  </div>
+  <footer>
+    <div class="tt">
+      <a href="gioithieu.html" style="color: white">Giới thiệu về công ty</a> <br>
+      <a href="huongdan.html" style="color: white">Hướng dẫn mua online</a> <br>
+      <a href="huongdan.html" style="color: white">Hướng dẫn mua trả góp</a> <br>     
+    </div>
+    <div class="tt2">
+      <p style="color: white">Tư vấn miễn phí (24/7)</p>
+      <h4 style="color: red">1800 2222</h4>
+      <p style="color: white">Góp ý,phản ánh(8h00-22h00)</p>
+      <h4 style="color: red">1800 6666</h4> 
+      <i class="fa fa-facebook-official" style="color: white"></i>
+      <i class="fa fa-google-plus" style="color: white"></i>
+      <i class="fa fa-skype" style="color: white"></i>
+      <i class="fa fa-twitter" style="color: white"></i>
+    </div>
+    <div class="tt3">
+      <p style="color: white">&copy;Địa chỉ:65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1, Tp.HCM</p>
+    </div>
+  </footer>
+  <div class="popup">
+    <a href="#header"><i class="fa fa-arrow-circle-up" style="color: white"></i>Top</a>
+  </div>
+</body>
+</html>

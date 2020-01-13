@@ -1,0 +1,718 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/* Set a style for all buttons */
+button {
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius:5px;
+    color: white;
+    padding: 8px 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+header{
+    position: relative;
+    overflow: hidden;
+}
+.navbar-nav{
+    margin-right: 50px;
+    margin-left: 150px;
+}
+.menu1 nav>ul>li{
+    display:inline-block;
+    position:relative;
+}
+
+.menu1 nav>ul>li>a{
+    display:block;
+    text-decoration:none;
+    padding:0 15px;
+    line-height:50px;
+    color:white;
+    font-weight:bold;
+}
+.menu1 nav>ul>li>a:hover{
+    color:#FF0;
+}
+.menu1 nav>ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    border-radius:10px;
+    background-color:#007bff;
+    text-align:center;
+}       
+.menu1 nav ul ul{
+    position:absolute;
+    display:none;
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    width:250px;
+}
+.menu1 nav ul ul a{
+    display:block;
+    line-height:30px;
+    background-color:#007bff;
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+    padding:10px 10px;
+}   
+.menu1 nav > ul > li:hover>ul{
+    display:block;
+}   
+.menu1 nav ul ul a:hover{
+    color:#FF0;
+}
+footer{
+    background-color: #04091e;
+
+}
+.tt{
+  width: 60%;
+  float: left;
+}
+.tt2{
+  width: 40%;
+  float: right;
+}
+.tt3{
+  width: 100%;
+  overflow: hidden;
+}
+.popup{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+@font-face{
+    font-family: awe-b;
+    src:url(../fonts/fa-brands-400.ttf);
+}
+[class^="awe-b"]{
+    font-family: awe-b;
+}
+.awe-b-fb::before{
+    content:'\f39e';
+    font-style: normal;
+}
+.awe-b-tw::before{
+    content:'\f099';
+    font-style: normal;
+}
+.awe-b-be::before{
+    content:'\f1b4';
+    font-style: normal;
+}
+.awe-b-db::before{
+    content:'\f17d';
+    font-style: normal;
+}
+.tt2 ul.s-icon{
+    list-style: none;
+    display: flex;
+}
+.tt2 ul.s-icon li{
+    padding:10px;
+}
+.tt2 ul a{
+    text-decoration: none;
+    color:#fff; 
+}
+.awe-arrow-up::before{
+    content:'\f0aa';
+    font-style: normal;
+}
+.popup1{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: red;
+    position: absolute;
+    bottom: 67vh;
+    right:60px;
+/*    z-index: 2;*/
+    color: white;
+}
+.logo{
+    position: absolute;
+    height: 60px;
+    width: 60%;
+    float:left;
+}
+@font-face{
+    font-family: awe-b;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-b"]{
+    font-family: awe-b;
+}
+.awe-b::before{
+    content:'\f005';
+    font-style: normal;
+}
+.checked{
+   color: orange;
+}
+.container{
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    /*text-align: center;*/
+    overflow: hidden;
+    position: relative;
+
+}
+.containerchitiet{
+    
+}
+.containerchitiet .col-sm-12{
+    overflow: hidden;
+}
+.containerchitiet .col-sm-12 .col-sm-5{
+    float: left;
+}
+.containerchitiet .col-sm-12 .col-sm-2{
+    float: left;
+}
+.slthem{
+    border: 1px solid;
+    color: green;
+    text-align: center;
+}
+.ship{
+    background-color: pink;
+    text-align: center;
+    border: 1px solid;;
+    color: red;
+}
+.KM{
+    border: 1px solid;
+    color: grey;
+    margin-top: 5px;
+}
+.hotline{
+    margin-top: 5px;
+}
+.TT{
+    margin-top: 10px;
+    border: 1px solid;
+    overflow: hidden;
+}
+.TT .left{
+    float: left;
+    width: 50%;
+}
+.TT .right{
+    float: left;
+    width: 50%;
+}
+/*.containersptt{
+    overflow: hidden;
+    border: 1px solid;
+    color: grey;
+    text-decoration-color: black;
+    margin-top: 15px;
+}
+*/
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+.footer-top{
+    display: flex;
+    width: auto;
+}
+/*.footer-top .tp1{
+    float: left;
+    width: 25%;
+}
+.*/
+.checked {
+    color: orange;
+}
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .side, .middle {
+        width: 100%;
+    }
+    /* Hide the right column on small screens */
+    .right {
+        display: none;
+    }
+}
+.userrating{
+    margin-top: 15px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+.containersptt{
+    margin-top: 30px;
+}
+.container .noidung{
+    text-align: center;
+}
+.stars {
+  width: 270px;
+  display: inline-block;
+}
+input.star { display: none; }
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+input.star-1:checked ~ label.star:before { color: #F62; }
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container1 {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+@font-face{
+    font-family: awe-b;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-b"]{
+    font-family: awe-b;
+}
+.awe-b::before{
+    content:'\f005';
+    font-style: normal;
+}
+@font-face{
+    font-family: awe-w;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-w"]{
+    font-family: awe-w;
+}
+.awe-w::before{
+    content:'\f07a';
+    font-style: normal;
+}
+
+@font-face{
+    font-family: awe-s;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-s"]{
+    font-family: awe-s;
+}
+.awe-s::before{
+    content:'\f02d';
+    font-style: normal;
+}
+
+@font-face{
+    font-family: awe-r;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-r"]{
+    font-family: awe-r;
+}
+.awe-r::before{
+    content:'\f025';
+    font-style: normal;
+}
+
+@font-face{
+    font-family: awe-a;
+    src:url(../fonts/fa-solid-900.ttf);
+}
+[class^="awe-a"]{
+    font-family: awe-a;
+}
+.awe-a::before{
+    content:'\f0c7';
+    font-style: normal;
+}
+.checked{
+   color: orange;
+}
+/***
+ *  Simple Pure CSS Star Rating Widget Bootstrap 4 
+ * 
+ *  www.TheMastercut.co
+ *  
+ ***/
+
+/* Styling h1 and links
+––––––––––––––––––––––––––––––––– */
+/*h1[alt="Simple"] {color: white;}
+a[href], a[href]:hover {color: grey; font-size: 0.5em; text-decoration: none}*/
+
+
+.starrating > input {display: none;}  /* Remove radio buttons */
+
+.starrating > label:before { 
+  font-size: 8em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.starrating > label
+{
+  color: #222222; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: #ffca08 ; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #ffca08 ;  } /* Set yellow color when star hover */
+.popup1{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: red;
+    position: absolute;
+    bottom: 67vh;
+    right:60px;
+/*    z-index: 2;*/
+    color: white;
+}

@@ -1,0 +1,240 @@
+body{
+ margin: auto;
+}
+.slogans{
+	background-color: black;
+	text-align: center;
+	color: orange;
+	margin-top: 50px;
+	padding-bottom: 30px;
+	overflow: hidden;
+
+}
+.slogans img{
+	border-radius: 50%;
+	width:10%;
+	margin-top: 30px;
+}
+.slogans h1{
+	text-align: center;
+	font-size: 1.2em; 
+	width: 60%;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin: 20px
+	auto 20px auto;
+	line-height: 1.5em;
+
+}
+header{
+	position: relative;
+	background-color: black;
+	width: 100%;
+	overflow: hidden;
+}
+.logo{
+	 width: 25%;
+	 float:left;
+	 left: 0%;
+}
+.phu{
+	margin-top: 25px;
+	float: left;
+	width: 75%;
+	left: 25%;
+	position: static;
+	top: 50%;
+	
+}
+.phu .baner{
+	transform: translate(-50%.-50%);
+	position: relative;
+	width: 70%;
+	float: left;
+
+}
+.phu .baner form {
+	width: 100%;
+	left: 5%;
+	position: absolute;
+}
+.phu .giohang {
+	float: right;
+	position: relative;
+	width: 30%;
+}
+ .giohang ul{
+	list-style: none;
+}
+.giohang ul li{
+	float: left;
+	padding-right: 10px;
+	margin-left: : 5px;
+}
+input[type=text]{
+	width: 60%;
+	height: 40px;
+}
+#menu
+{
+	margin-top: 0px;
+  	height:70px;
+	background-color:#FC9;
+	margin:5px 0px;
+}
+#menu ul
+{
+	list-style:none;
+}
+#menu ul li
+{
+	float: left;
+	padding: 10px;
+	position: relative;
+	margin: 5px;
+}
+#menu ul li:last-child
+{
+	border:none;
+}
+#menu ul li a
+{
+	text-decoration:none;
+	padding:10px 40px;
+	display:block;
+	white-space:pre;
+}
+#menu ul li a:hover
+{
+	color:red;
+	background-color:#FF0;
+	border-top:5px aqua solid;
+	transition:all 1s 0s linear;
+}
+/* cap 2 */
+#menu ul ul li
+{
+	float:none;
+	border-right:none;
+	border-bottom:1px dotted #999;
+}
+#menu ul ul
+{
+	background-color:#0FF;
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:1000;
+	display:none;
+}
+#menu ul li:hover > ul
+{
+	display:block;
+}
+/* cap 3 */
+
+#menu ul ul ul
+{
+	left:100%;
+	top:0;
+}
+.container{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	background-color: beige;
+	/*text-align: center;*/
+	overflow: hidden;
+
+}
+.containerchitiet{
+	
+}
+.containerchitiet .col-sm-12{
+	overflow: hidden;
+}
+.containerchitiet .col-sm-12 .col-sm-5{
+	float: left;
+}
+.containerchitiet .col-sm-12 .col-sm-2{
+	float: left;
+}
+.slthem{
+	border: 1px solid;
+	color: green;
+	text-align: center;
+}
+.ship{
+	background-color: pink;
+	text-align: center;
+	border: 1px solid;;
+	color: red;
+}
+.KM{
+	border: 1px solid;
+	color: grey;
+	margin-top: 5px;
+}
+.hotline{
+	margin-top: 5px;
+}
+.TT{
+	margin-top: 10px;
+	border: 1px solid;
+	overflow: hidden;
+}
+.TT .left{
+	float: left;
+	width: 50%;
+}
+.TT .right{
+	float: left;
+	width: 50%;
+}
+.containersptt{
+	overflow: hidden;
+	border: 1px solid;
+	color: grey;
+	text-decoration-color: black;
+	margin-top: 15px;
+}
+.containersptt .photo{
+	width: 25%;
+	float: left;
+	overflow: hidden;
+}
+.containersptt .photo img{
+	width: 100%;
+	display: block;
+	transition: all 2s;
+}
+.containersptt .photo img:hover{
+	transform: scale(1.2);
+}
+.containersptt .photo p{
+	text-align: center;
+	color: red;
+}
+.containersptt .photo p:hover{
+	property : value;
+}
+footer{
+	margin-top: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+.footer-top{
+	display: flex;
+	width: auto;
+}
+/*.footer-top .tp1{
+	float: left;
+	width: 25%;
+}
+.*/
+.container .dangnhap{
+	text-align: center;
+}
+.container .dangky{
+	text-align: center;
+}

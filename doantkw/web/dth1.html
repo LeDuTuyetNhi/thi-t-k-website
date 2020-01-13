@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- gan kich thuoc bang kich thuoc man hinh -->
+	<title>Trang chủ</title>
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dth1.css">
+	<script src="js/dth.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="js/zoom.js"></script>
+	<script src="vendor/jquery/popper.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+	<script type="text/javascript">
+		$(function() {
+			$('#frmSearch').submit(function(){
+				if ($('[name="txtKey"]').val()=="")
+				{
+					alert('Chưa nhập từ khóa');
+					return false;
+				}
+				return true;
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="header">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a href="trangchu.html" class="navbar-brand"><img src="img/images.jpg" alt="1" height="60px" width="75%"></a>
+			<div class="collapse navbar-collapse" id="nav-content">
+				<ul class="navbar-nav">
+					<li><a href="giohang.html" style="color: white"><i class="awe-w"></i>Giỏ hàng &nbsp;&nbsp;</a></li>
+					<li><a href="tintuc.html" style="color: white"><i class="awe-s"></i>Tin tức &nbsp;&nbsp;</a></li>
+					<li><a href="phukien.html" style="color: white"><i class="awe-r"></i>Phụ kiện &nbsp;&nbsp;</a></li>
+					<li><a href="simthe.html" style="color: white"><i class="awe-a"></i>Sim & thẻ</a></li>
+				</ul>
+				<form id="frmSearch" method="post" class="form-inline">
+					<input type="text" class="form-control" placeholder="nhập tên cần tìm">
+					<button type="submit" >search</button>
+				</form>			
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+						<div id="id01" class="modal">
+							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<form class="modal-content" action="/action_page.php">
+								<div class="container">
+									<h1>Sign Up</h1>
+									<p>Please fill in this form to create an account.</p>
+									<hr>
+									<label for="email"><b>Email</b></label>
+									<input type="text" placeholder="Enter Email" name="email" required>
+
+									<label for="psw"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="psw" required>
+
+									<label for="psw-repeat"><b>Repeat Password</b></label>
+									<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+									<label>
+										<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+									</label>
+
+									<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+									<div class="clearfix">
+										<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+										<button type="submit" class="signupbtn">Sign Up</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>
+					<li class="nav-item active">
+						<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+						<div id="id02" class="modal">
+
+							<form class="modal-content animate" action="/action_page.php">
+								<div class="imgcontainer" align="center">
+									<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<img src="img/avata.png" alt="Avatar" class="avatar" width="15%" height="50px">
+								</div>
+
+								<div class="container">
+									<label for="uname"><b>Username</b></label>
+									<input type="text" placeholder="Enter Username" name="uname" required>
+
+									<label for="psw"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="psw" required>
+
+									<button type="submit">Login</button>
+									<label>
+										<input type="checkbox" checked="checked" name="remember"> Remember me
+									</label>
+								</div>
+								<div class="container" style="background-color:#f1f1f1">
+									<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+									<span class="psw">Forgot <a href="#">password?</a></span>
+								</div>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>	
+	</header>
+	<nav>
+		<div class="menu" align="center">
+			<a href="trangchu.html"><button type="button" class="btn btn-primary">Trang chủ</button></a>
+			<a href="gioithieu.html"><button type="button" class="btn btn-primary">Giới thiệu</button></a>
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					Điện thoại
+				</button>
+				<div class="dropdown-menu">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+						Hãng sản xuất
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Iphone</a>
+						<a class="dropdown-item" href="#">Oppo</a>
+						<a class="dropdown-item" href="#">Asus</a>
+						<a class="dropdown-item" href="#">Samsung</a>
+						<a class="dropdown-item" href="#">Vivo</a>
+					</div>
+				</div>
+			</div>
+			<a href="huongdan.html"><button type="button" class="btn btn-primary">Hướng dẫn mua hàng</button></a>
+			<a href="lienhe.html"><button type="button" class="btn btn-primary">Liên hệ</button></a>
+			<a href="trangcanhan.html"><button type="button" class="btn btn-primary">Trang cá nhân</button></a>
+		</div>	
+	</nav>
+	<div class="nd">
+		<div class="container">
+			<div class="containerchitiet">
+				<h5>Điện Thoại Xiaomi Redmi Note 5 - 32GB</h5>
+				<ul>
+					<i class="awe-b checked"></i>
+					<i class="awe-b checked"></i>
+					<i class="awe-b checked"></i>
+					<i class="awe-b checked"></i>
+					<i class="awe-b"></i>						
+				</ul>
+				<div class="col-sm-12">
+					<div class="col-sm-5">
+						<div class="img-magnifier-container">
+							<div class="container1">
+								<div class="mySlides">
+									<div class="numbertext">1 / 6</div>
+									<img id="myimage" src="img/dth_1.jpg" style="width:90%">
+								</div>
+
+								<div class="mySlides">
+									<div class="numbertext">2 / 6</div>
+									<img id="myimage" src="img/dth_1a.jpg" style="width:90%">
+								</div>
+
+								<div class="mySlides">
+									<div class="numbertext">3 / 6</div>
+									<img id="myimage" src="img/dth_1b.jpg" style="width:90%">
+								</div>
+
+								<div class="mySlides">
+									<div class="numbertext">4 / 6</div>
+									<img id="myimage" src="img/dth_1a.jpg" style="width:90%">
+								</div>
+
+								<div class="mySlides">
+									<div class="numbertext">5 / 6</div>
+									<img id="myimage" src="img/dth_1.jpg" style="width:90%">
+								</div>
+
+								<div class="mySlides">
+									<div class="numbertext">6 / 6</div>
+									<img id="myimage" src="img/dth_1a.jpg" style="width:90%">
+								</div>
+
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+								<a class="next" onclick="plusSlides(1)">❯</a>
+
+								<div class="caption-container">
+									<p id="caption"></p>
+								</div>
+
+								<div class="row">
+									<div class="column">
+										<img class="demo cursor" src="img/dth_1.jpg" style="width:50%" onclick="currentSlide(1)" alt="">
+									</div>
+									<div class="column">
+										<img class="demo cursor" src="img/dth_1a.jpg" style="width:50%" onclick="currentSlide(2)" alt="">
+									</div>
+									<div class="column">
+										<img class="demo cursor" src="img/dth_1c.jpg" style="width:50%" onclick="currentSlide(3)" alt="">
+									</div>
+									<div class="column">
+										<img class="demo cursor" src="img.dth_1c.jpg" style="width:50%" onclick="currentSlide(4)" alt="">
+									</div>
+									<div class="column">
+										<img class="demo cursor" src="img/dth_1.jpg" style="width:50%" onclick="currentSlide(5)" alt="">
+									</div>    
+									<div class="column">
+										<img class="demo cursor" src="img/dth_1a.jpg" style="width:50%" onclick="currentSlide(6)" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<script>
+							/* Bắt đầu chức năng phóng đại với id của hình ảnh và độ mạnh của kính lúp:*/
+							magnify("myimage", 2);
+						</script>
+					</div>
+					<div class="col-sm-5">
+					</br>
+					<h4 style="color: red"><del>5.990.000 VNĐ</del></h4>
+					<p>4.799.000 VNĐ</p>
+					<div class="slthem">
+						<span class="slt" style="undefined; font-weight:bold !important; color: #257C00 !important; ">10</span>
+					Khách hàng vừa cho sản phẩm vào giỏ hàng 15 phút  trước</br>
+				</div>
+				<p style="color: green; font-weight: bold;">CÒN HÀNG</p>
+				<div class="ship">
+					<p>SẢN PHẨM NHẬN GIAO HÀNG TRONG 1 GIỜ</p>
+				</div>
+				<div class="KM">
+					<p style="background-color: green; color: #fff; text-align:center;"">Khuyến mãi đặc biệt (SL có hạn)</p>
+					<ul>
+						<li>Trả góp 0%</li>
+						<li>Tặng gói bảo hành mở rộng 15 tháng</li>
+						<li>Đổi trả trong vòng 45 ngày do lỗi NSX</li>
+					</ul>
+				</div>
+				<form>
+					<b> Chọn màu : </b> 
+					Vàng <input type="radio" name="mau" value=" vang">Đen<input type="radio" name="mau" value="den">Xám<input type="radio" name="mau" value="xam"></br>
+				</form>
+				<div class="button">
+					<button type="button" class="btn btn-danger">
+						<h5>MUA NGAY</h5>
+						<em>Giao tận nơi hoặc nhận ở shop</em>
+					</button>
+					<button type="button" class="btn btn-primary">
+						<h5>TRẢ GÓP</h5>
+						<em>Xét duyệt nhanh qua điện thoại</em>
+					</button>
+				</div>
+				<div class="hotline">
+					Gọi <span class="slt" style=" undefined; font-weight:bold !important; color: red !important; ">19001099</span>
+				để được tu vấn (miễn phí cuộc gọi)</br>
+			</div>
+			<div class="TT">
+				<p style="text-align: center; color: black;">Cấu hình sản phẩm</p>
+				<ul class="left">
+					<li>Màn hình 5.99 inch</li>
+					<li>Camera: Chính:Dual 12.0 MP + 5.0 MP. Phụ:13.0 MP</li>
+					<li>Pin: 4000mAh</li>
+				</ul>
+				<ul class="right">
+					<li>Ram: 3GB</li>
+					<li>CPU: Qualcomm Snapdraggon 636</li>
+					<li>HĐH: Android 8.0</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<h6>Tìm shop còn hàng gần bạn</h6>
+			<form>
+				<select name="chọn tp hoặc tỉnh"></br>
+					<option value="TPHCM">TP Hồ Chí Minh</option>
+					<option value="TienGiang">Tiền Giang</option>
+					<option value="AnGiangg">An Giang</option>
+					<option value="DaLat">Đà Lạt</option>
+					<option value="HaNoi">Hà Nội</option>
+				</select></br>
+				<select name="chọn quận huyện">
+					<option value="quan">quận 1</option>
+					<option value="quan">quận 2</option>
+					<option value="quan">quận 3</option>
+					<option value="quan">quận 4</option>
+					<option value="quan">quận 5</option>
+					<option value="quan">quận 6</option>
+					<option value="quan">quận 7</option>
+					<option value="quan">quận 8</option>
+					<option value="quan">quận 9</option>
+					<option value="quan">quận 10</option>
+					<option value="quan">quận 11</option>
+					<option value="quan">quận 12</option>
+				</select></br>
+				<select name="chọn màu">
+					<option value="mau">Vàng gold</option>
+					<option value="mau">Đen </option>
+					<option value="mau">Xám</option>
+				</select>
+
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container mt-3">
+	<br>
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#home">Điện thoại tương tự</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#menu1">Điện thoại cùng hãng</a>
+		</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div id="home" class="container tab-pane active"><br>
+			<div class="row">
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_5.jpg" alt="" class="img-fluid"></a>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Xiaomi Redmi Note 5 32GB</h3></a>
+					<h4 class="text-center">4.799.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>						
+					</ul>					
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_3.jpg" alt="" class="img-fluid"></a>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Oppo F7</h3></a>
+					<h4 class="text-center">7.990.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>						
+					</ul>
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_2.jpg" alt="" class="img-fluid"></a>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Xiaomi Redmi 5 Plus</h3></a>
+					<h4 class="text-center">3.990.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>
+						<i class="awe-b"></i>						
+					</ul>
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_1.jpg" alt="" class="img-fluid"></a>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Samsung Galaxy S9+</h3></a>
+					<h4 class="text-center">23.490.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>						
+					</ul>										
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu1" class="container tab-pane fade"><br>
+			<div class="row">
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_1.jpg" alt="" class="img-fluid"></a>
+					<div class="popup1">Trả góp 0%</div>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Xiaomi Redmi Note 5 32GB</h3></a>
+					<h4 class="text-center">4.799.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>						
+					</ul>					
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_2.jpg" alt="" class="img-fluid"></a>
+					<div class="popup1">Trả góp 0%</div>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Oppo F7</h3></a>
+					<h4 class="text-center">7.990.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>						
+					</ul>
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_3.jpg" alt="" class="img-fluid"></a>
+					<div class="popup1">Trả góp 0%</div>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Xiaomi Redmi 5 Plus</h3></a>
+					<h4 class="text-center">3.990.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>
+						<i class="awe-b"></i>						
+					</ul>
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="dth1.html"><img src="img/dth_4.jpg" alt="" class="img-fluid"></a>
+					<div class="popup1">Trả góp 0%</div>
+					<a href="dth1.html"><h3 class="text-center" style="color: black">Samsung Galaxy S9+</h3></a>
+					<h4 class="text-center">23.490.000VNĐ</h4>
+					<ul>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b checked"></i>
+						<i class="awe-b"></i>						
+					</ul>										
+					<div class="container-fuild text-center">
+						<button class="btn btn-primary">mua ngay</button>
+						<div class="ico-new"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container_thongtin">
+	<h4> Thông số Kỹ Thuật của Xiaomi Redmi Note 5 32GB</h4><hr>  
+	<p style="color: red; font-family: bold;">Thông số cơ bản</p>  <hr>        
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td>Độ phân giải màn hình:  </td>
+				<td>1080 x 2160 Pixels</td>
+			</tr>
+			<tr>
+				<td>Màn hình: </td>
+				<td>5.99"</td>
+			</tr>
+			<tr>
+				<td>Camera trước: </td>
+				<td>13MP</td>
+			</tr>
+			<tr>
+				<td>Camera sau: </td>
+				<td>12MP và 5MP (2 Camera)</td>
+			</tr>
+			<tr>
+				<td>Tốc độ CPU: </td>
+				<td>1.8 Ghz</td>
+			</tr>
+			<tr>
+				<td>Số nhân: </td>
+				<td>8 nhân</td>
+			</tr>
+			<tr>
+				<td>Chipset: </td>
+				<td>Qualcomm Snapdragon 636</td>
+			</tr>
+			<tr>
+				<td>RAM: </td>
+				<td>3GB</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="bl">
+	<h4>Bình luận</h4>
+	<input type="text" placeholder="Viết bình luận của bạn">
+	<button type="button" class="btn btn-danger">Gửi câu hỏi</button>
+</div>
+<div class="star">
+	<div class="starrating risingstar d-flex justify-content-center flex-row-reverse" align="left">
+		<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 star"><i class="awe-b"></i></label>
+		<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 star"><i class="awe-b"></i></label>
+		<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 star"><i class="awe-b"></i></label>
+		<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 star"><i class="awe-b"></i></label>
+		<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"><i class="awe-b"></i></label>
+		<h4>Rating:</h4>
+	</div>
+</div>	
+
+
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+	<div class="side">
+		<div>5 star</div>
+	</div>
+	<div class="middle">
+		<div class="bar-container">
+			<div class="bar-5"></div>
+		</div>
+	</div>
+	<div class="side right">
+		<div>150</div>
+	</div>
+	<div class="side">
+		<div>4 star</div>
+	</div>
+	<div class="middle">
+		<div class="bar-container">
+			<div class="bar-4"></div>
+		</div>
+	</div>
+	<div class="side right">
+		<div>63</div>
+	</div>
+	<div class="side">
+		<div>3 star</div>
+	</div>
+	<div class="middle">
+		<div class="bar-container">
+			<div class="bar-3"></div>
+		</div>
+	</div>
+	<div class="side right">
+		<div>15</div>
+	</div>
+	<div class="side">
+		<div>2 star</div>
+	</div>
+	<div class="middle">
+		<div class="bar-container">
+			<div class="bar-2"></div>
+		</div>
+	</div>
+	<div class="side right">
+		<div>6</div>
+	</div>
+	<div class="side">
+		<div>1 star</div>
+	</div>
+	<div class="middle">
+		<div class="bar-container">
+			<div class="bar-1"></div>
+		</div>
+	</div>
+	<div class="side right">
+		<div>20</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+	<div class="tt">
+		<a href="lienhe.html" style="color: white">Giới thiệu về công ty</a> <br>
+		<a href="lienhe.html" style="color: white">Hướng dẫn mua online</a> <br>
+		<a href="lienhe.html" style="color: white">Hướng dẫn mua trả góp</a> <br>     
+	</div>
+	<div class="tt2">
+		<p style="color: white">Tư vấn miễn phí (24/7)</p>
+		<h4 style="color: red">1800 2222</h4>
+		<p style="color: white">Góp ý,phản ánh(8h00-22h00)</p>
+		<h4 style="color: red">1800 6666</h4> 
+		<ul class="s-icon">
+			<li><a href="#"> <i class="awe-b-fb"></i></a></li>
+			<li><a href="#"> <i class="awe-b-tw"></i></a></li>
+			<li><a href="#"> <i class="awe-b-db"></i></a></li>
+			<li><a href="#"> <i class="awe-b-be"></i></a></li>
+		</ul>
+	</div>
+	<div class="tt3">
+		<p style="color: white">&copy;Địa chỉ:65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1, Tp.HCM</p>
+	</div>
+</footer>
+<div class="popup">
+	<a href="#header"><i class="awe-arrow-up" style="color: white"></i>Top</a>
+</div>
+</body>
+</html>
